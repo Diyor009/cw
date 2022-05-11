@@ -1,0 +1,138 @@
+@import "variables";
+.contact{
+   padding: 20px 40px;
+}  
+.contact__inner{
+   display: flex;
+   justify-content: space-between;
+   
+}
+.contact__content{
+   background: linear-gradient(to bottom right, #e4eef7, #ffffff);
+   padding: 20px;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0px 5px 20px 2px rgba(183, 194, 202, 0.2) inset;
+   margin-right: 20px;
+   border-radius: 8px;
+}
+.contact__subtitle{
+   font-size: 22px;
+   color: $pink;
+   margin-bottom: 20px;
+}
+.contact__title{
+   font-size: 48px;
+   margin-bottom: 40px;
+   font-weight: 700;
+}
+.contact__form{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   input{
+      display: block;
+      border: 1px solid #e7e7e7;
+      padding: 14px 20px;  
+      width: 100%;    
+      border-radius: 6px;
+      margin-bottom: 15px;
+      background-color: #e9f1f9;
+   }
+}
+.contact__name{
+   max-width: 48%;
+}
+.contact__lastname{
+   max-width: 48%;
+}
+.contact__message{   
+   min-height: 150px;
+   margin-bottom: 30px;
+}
+.contact__btn{
+   color: #ffffff;
+    border: 5px;
+    padding: 20px 15px;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease-in;
+    span{
+       margin-left: 5px;
+       font-size: 24px;
+    }
+}
+.contact__img{
+   background: linear-gradient(to bottom right, #e4eef7, #ffffff);
+   padding: 20px;
+   align-items: center;
+   text-align: center;
+   box-shadow: 0px 5px 20px 2px rgba(183, 194, 202, 0.2) inset;
+   border-radius: 8px;
+}
+.contact__text{
+   margin: 30px 0 20px;
+}
+.contact__example{
+   margin-top: 30px;
+   font-size: 22px;
+   display: block;
+   p{
+      margin-top: 30px;
+      font-size: 20px;
+   }
+}
+
+@media screen and  (max-width: 991.98px) {
+   .contact__img{
+      display: none;
+   }
+   .contact__content{
+      margin-right: 0;
+   }
+   .contact{
+      padding: 10px 60px;
+   }
+}
+@media screen and  (max-width: 767.98px){
+   .contact__title{
+      font-size: 38px;
+      margin-bottom: 30px;
+   }
+   .contact{
+      padding: 10px 30px;
+   }
+}
+
+@media screen and  (max-width: 539.98px){
+   .contact{
+      padding: 10px 20px;
+   }
+   .contact__title{
+      margin-top: -10px;
+      font-size: 32px;
+      margin-bottom: 20px;
+   }
+   .contact__name{
+      max-width: 100%;
+   }
+   .contact__lastname{
+      max-width: 100%;
+   }
+   .contact__btn{
+       border: 3px;
+       padding: 15px 10px;
+       font-size: 16px;
+       span{
+          margin-left: 5px;
+          font-size: 20px;
+       }
+   }
+}
+@media screen and  (max-width: 411.98px){
+
+}

@@ -1,0 +1,138 @@
+@import "contents/variables";
+@import "contents/header";
+@import "contents/footer";
+@import "contents/hero";
+@import "contents/resume";
+@import "contents/service";
+@import "contents/contactme";
+@import "contents/portfolio";
+@import "contents/contact";
+@import "contents/testimonial";
+
+
+@font-face {
+   font-family: 'robotobold';
+   src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-bold-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'robotomedium';
+   src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-medium-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'robotoregular';
+   src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-regular-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+html{
+   font-size: 10px;   
+}
+
+body{
+   font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+   font-size: 1.6rem;
+   color: $blue;
+   position: relative;
+   background-color: #e3edf7;
+}
+ul{
+   list-style: none;
+}
+a{
+   text-decoration: none;
+   cursor: pointer;
+   color: $blue;
+}
+.container {
+   max-width: 1210px;
+   padding: 0 15px;
+   width: 100%;
+   margin: 0 auto;
+}
+.btn{
+   position: relative;
+   color: $blue;
+   border-radius: 10px;
+   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+   border: none;
+   background: rgb(243,249,255);
+   background: linear-gradient(320deg, rgba(243,249,255,1) 0%, rgba(245,253,255,1) 0%, rgba(241,253,255,1) 21%, rgba(225,250,255,1) 59%);
+   font-size: 18px;
+   cursor: pointer;
+   font-weight: 700;
+   transition: all 500ms linear;
+   z-index: 1;
+   &:hover{
+      color: $white;
+   }
+   &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 10px;
+      transition: transform 400ms ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: rgb(155,0,238);
+      background: linear-gradient(74deg, rgba(155,0,238,1) 19%, rgba(169,30,233,1) 52%, rgba(221,90,244,1) 94%);
+   }
+}
+.btn:hover::before{
+      transform: scaleX(1);
+}
+.btn-active{
+   background: rgb(155,0,238);
+   background: linear-gradient(74deg, rgba(155,0,238,1) 19%, rgba(169,30,233,1) 52%, rgba(221,90,244,1) 94%);
+   transform: scaleX(1);
+   color: $white;
+}
+.status{
+   font-size: 22px;
+   color: $blue;
+   text-align: center;
+   margin: 10px auto;
+}
+
+@media screen and  (max-width: 991.98px) {
+   .container {
+      max-width: 960px;
+   }
+}
+@media screen and  (max-width: 767.98px){
+   .container{ 
+      max-width: 747px;
+      padding: 0 10px;
+   }
+}
+@media screen and  (max-width: 539.98px){
+   .container{ 
+      max-width: 519px;
+      padding: 0 10px;
+   }
+   .btn{
+      margin-right: 40px;
+   }
+}
+@media screen and  (max-width: 411.98px){
+   .container{ 
+      max-width: 401px;
+      padding: 0 5px;
+   }
+}

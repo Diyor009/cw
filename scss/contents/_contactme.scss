@@ -1,0 +1,115 @@
+@import "variables";
+.contactme{
+   background-color: #e3edf7;
+   padding-bottom: 50px;
+}
+.contactme__inner{
+   position: relative;
+   border-radius: 10px;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+   background: rgb(235,242,255);
+   background: linear-gradient(90deg, rgba(223, 233, 251, 0.925) 0%, rgba(250,252,255,1) 100%);
+   box-shadow: 3px 7px 40px 40px rgba(248, 250, 251, 0.2);
+}
+.contactme__subtitle{
+   margin-top: 70px;
+   color: $pink;
+   font-size: 22px;
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+.contactme__title {
+   font-size: 48px;
+   font-weight: 700;   
+   margin-bottom: 30px;
+}
+.contactme__btn {
+   padding: 12px 18px;
+   margin-bottom: 50px;   
+}
+.contactme__img {
+   position: absolute;
+   top: -69px;
+   right: 30px;
+}
+
+.modal{
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   overflow: hidden;
+   overflow-y: auto;
+   display: none;
+   flex-flow: column nowrap;
+   justify-content: center; /* см. ниже */
+   align-items: center;
+   z-index: 99;
+   background-color: rgba($blue, .95);
+   form{      
+      display: flex;
+      width: 100%;
+      max-width: 740px;
+      background-color: $gray;
+      padding: 20px; 
+      border-radius: 10px;
+   }
+   button{
+      margin: 0 auto 10px;
+   }
+}
+.modal__contact{
+   position: relative;
+   width: 100%;
+   max-width: 800px;
+   margin: 5% auto 0;
+}
+.modal__close{
+   position: absolute;
+   top: -50px;
+   right: 20px;
+   z-index: 1000; 
+   color: $white;
+   transform: rotate(45deg);
+   font-size: 34px;
+   cursor: pointer;
+}
+
+@media screen and  (max-width: 991.98px) {
+   .contactme__content {
+      width: 60%;
+   }
+}
+@media screen and  (max-width: 767.98px){
+   
+   .contactme__subtitle{
+      margin-top: 50px;
+      color: $pink;
+      font-size: 20px;
+      margin-bottom: 20px;
+   }
+   .contactme__title {
+      font-size: 38px;
+      font-weight: 700;   
+      margin-bottom: 20px;
+   }
+   .contactme__img {
+      top: -60px;
+      right: 0;
+      img{
+         width: 240px;
+         height: 340px;
+      }
+   }
+}
+@media screen and  (max-width: 539.98px){
+   .contactme__img {
+      display: none;
+   }
+   .contactme__content {
+      width: 90%;
+   }
+}
